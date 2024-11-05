@@ -317,12 +317,12 @@ select {
 /*aside*/
 
 .adds {
-  width: 270px;
-  min-height: 1424px;
+  max-width: 270px;
+  
 }
 
 .new-posts {
-  min-height: 500px;
+  
   margin: auto;
   padding-top: 0;
   margin-bottom: 60px;
@@ -352,7 +352,7 @@ select {
 
 .new-post {
   display: flex;
-  width: 270px;
+  max-width: 270px;
 }
 
 .new-post:nth-of-type(n + 2) {
@@ -387,15 +387,18 @@ select {
 
 .search {
   margin-bottom: 60px;
+  max-width: 270px;
+  
 }
 
 .form-row-search {
   display: inline-block;
   position: relative;
+  width: 100%;
 }
 
 .field-search {
-  width: 270px;
+  width: 100%;
   height: 48px;
   padding: 0 0 0 19px;
   font-family: "OpenSans-Regular", sans-serif;
@@ -420,7 +423,7 @@ select {
   border: none;
   position: absolute;
   background-color: var(--color-gold);
-  background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/search.svg"), url("C:/Users/Admin/Desktop/diplomsvg/search.svg");
+  background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/search.svg"), url("C:/Users/Admin/Desktop/diplom/svg/search.svg");
   background-repeat: no-repeat;
   background-size: 18px 18px;
   background-position: center center;
@@ -436,11 +439,13 @@ select {
 
 .mailing {
   margin-bottom: 60px;
+  max-width: 270px;
 }
 
 .form-row-mailing {
   display: inline-block;
   position: relative;
+  width: 100%;
 }
 
 .field-email {
@@ -679,7 +684,7 @@ select {
 .social-1 {
   width: 20px;
   height: 20px;
-  background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/001-dribbble.svg"), url("C:/Users/Admin/Desktop/diplomsvg/001-dribbble.svg");
+  background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/001-dribbble.svg"), url(C:/Users/Admin/Desktop/diplom/svg/001-dribbble.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -688,7 +693,7 @@ select {
 .social-2 {
   width: 20px;
   height: 20px;
-  background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/001-pinterest.svg"), url("C:/Users/Admin/Desktop/diplomsvg/001-pinterest.svg");
+  background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/001-pinterest.svg"), url(C:/Users/Admin/Desktop/diplom/svg/001-pinterest.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -697,7 +702,7 @@ select {
 .social-3 {
   width: 20px;
   height: 20px;
-  background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/003-tumblr.svg"), url("C:/Users/Admin/Desktop/diplom/svg/003-tumblr.svg");
+  background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/003-tumblr.svg"), url(C:/Users/Admin/Desktop/diplom/svg/003-tumblr.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -792,7 +797,7 @@ select {
   color: #000000;
   background-color: var(--color-lightblue);
   border: none;
-  background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/form-arrows.svg"), url("C:/Users/Admin/Desktop/diplomsvg/form-arrows.svg");
+  background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/form-arrows.svg"), url("C:/Users/Admin/Desktop/diplom/svg/form-arrows.svg");
   background-repeat: no-repeat;
   background-size: 7px 18px;
   background-position: right 17px center; 
@@ -942,7 +947,7 @@ select {
     display: inline-block;
     width: 23px;
     height: 17px;
-    background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/icons8-hamburger-menu.svg"), url("C:/Users/Admin/Desktop/diplomsvg/icons8-hamburger-menu.svg");
+    background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/icons8-hamburger-menu.svg"), url("C:/Users/Admin/Desktop/diplom/svg/icons8-hamburger-menu.svg");
     background-size: 23px 17px;
     background-repeat: no-repeat;
     background-position: top right;
@@ -1060,7 +1065,8 @@ select {
 @media (max-width: 640px), (orientation: portrait) {
 
   .header {
-    width: 100%;
+    max-width: 100vw;
+    margin: 0;
     position: relative;
     background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/images/banner-mobile.jpg"), url("C:/Users/Admin/Desktop/diplom/images/banner-mobile.jpg");
     background-repeat: no-repeat;
@@ -1091,7 +1097,7 @@ select {
     right: 16px;
     width: 23px;
     height: 17px;
-    background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/icons8-hamburger-menu.svg"), url("C:/Users/Admin/Desktop/diplomsvg/icons8-hamburger-menu.svg");
+    background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/svg/icons8-hamburger-menu.svg"), url("C:/Users/Admin/Desktop/diplom/svg/icons8-hamburger-menu.svg");
     background-size: 23px 17px;
   }
 
@@ -1101,34 +1107,40 @@ select {
     font-size: 26px;
     line-height: 36px;
   }
+  .trends {
+    max-width: 100vw;
+  }
+
 
   .block-title {
     font-size: 16px;
+    max-width: 100vw;
   }
 
   .post-trends {
     display: flex;
     flex-direction: column;
+    max-width: 100vw;
   }
 
   .trend-box {
-    width: 100%;
+    max-width: 100vw;
   }
 
   .conteiner {
     flex-direction: column;
-    max-width: 100%;
+    max-width: 100vw;
     margin: 0;
   }
 
   .posts {
-    max-width: 92%;
+    max-width: 100%;
     margin: 0;
   }
 
   .post {
     flex-direction: column;
-    max-width: 92%;
+    max-width: 100%;
     margin-bottom: 33px;
     position: relative;
   }
@@ -1175,11 +1187,13 @@ select {
   }
 
   .adds {
-    width: 330px;
+    width: 100%;
+    max-width: 640px;
   }
 
   .aside-title {
     font-size: 16px;
+    text-align: center;
   }
 
   .new-posts {
@@ -1188,29 +1202,32 @@ select {
 
   .search {
     margin-bottom: 44px;
+    width: 100%;
+    max-width: 640px;
   }
 
   .mailing {
     margin-bottom: 44px;
+    width: 100%;
+    max-width: 640px;
   }
+
   .tegs {
     margin-bottom: 44px;
   }
 
-  .field-search {
-    width: 330px;
-  }
-
   .field-email {
-    width: 330px;
+    max-width: 640px;
+    width: 100%;
   }
 
   .submit-email {
-    width: 330px;
+    max-width: 640px;
+    width: 100%;
   }
 
   .goods {
-    max-width: 92%;
+    max-width: 100vw;
     margin: 44px 0 0 0;
   }
 
@@ -1220,30 +1237,28 @@ select {
   }
 
   .goods-box {
-    width: 284px;
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: 640px;
+    width: 100%;
+    padding: 0;
+    align-items: center;
   }
 
   .item-first {
-    max-width: 284px;
-    max-height: 284px;
+    width: 100%;
     background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/images/shop-item-mobile1.jpg"), url("C:/Users/Admin/Desktop/diplom/images/shop-item-mobile1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .item-second {
-    max-width: 284px;
-    max-height: 284px;
+    width: 100%;
     background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/images/shop-item-mobile2.jpg"), url("C:/Users/Admin/Desktop/diplom/images/shop-item-mobile2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .item-third {
-    max-width: 284px;
-    max-height: 284px;
+    width: 100%;       
     background-image: url("https://github.com/Dima19081988/DIplom-2-modul/blob/main/images/shop-item-mobile3.jpg"), url("C:/Users/Admin/Desktop/diplom/images/shop-item-mobile3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1261,12 +1276,15 @@ select {
   }
 
   .goods-content {
-    padding-top: 55px;
     margin-top: -27px;
+    padding-top: 55px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
     display: flex;
     flex-direction: column;
     outline: 3px solid #d3c59d;
-    outline-offset: 15px;
+    outline-offset: 1px;
     margin-bottom: 24px;
   }
 
@@ -1276,7 +1294,8 @@ select {
   }
 
   .footer {
-    max-width: 360px;
+    max-width: 640px;
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0;
