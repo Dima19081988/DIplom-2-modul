@@ -756,7 +756,6 @@ select {
 .box-popup {
   position: absolute;
   max-width: 330px;
-  max-height: 536px;
   padding: 54px 30px;
   background-color: var(--color-white);
   top: 50%;
@@ -783,7 +782,7 @@ select {
   height: 3px;
   background-color: #e1d9bd;
   top: 35px;
-  left: 130px;
+  left: 50%;
   transform: translate(-50%, 0);
 
 }
@@ -880,7 +879,7 @@ select {
 
 .textarea-field-content {
   resize: none;
-  max-height: 130px;
+  height: 130px;
   border: none;
   background-color: var(--color-lightblue);
 }
@@ -927,16 +926,10 @@ select {
 }
 
 
-/*@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
-  .post-trends {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}*/
-
-
 @media (min-width: 641px) and (max-width: 1199px), (orientation: portrait) {
   
   .header {
+    padding-bottom: 125px;
     position: relative;
     z-index: 0;
     background-repeat: no-repeat;
@@ -959,9 +952,20 @@ select {
   }
 
   .title-text {
-    max-width: 603px;
+    width: 100%;
+    padding: 0;
+    margin-top: 100px;
     font-size: 40px;
+    line-height: 55px;
+    text-align: center;
     hyphens: auto;
+  }
+  .trends {
+    padding-top: 50px;
+  }
+
+  .block-title {
+    margin-bottom: 33px;
   }
 
   .post-trends {
@@ -985,8 +989,10 @@ select {
   }
 
   .conteiner {
-    max-width: 770px;
-    margin: 0 auto;
+    /*width: 770px;*/
+    width: 100%;
+    margin: 0;
+    padding: 50px 35px;
     justify-content: space-between;
   }
 
@@ -999,10 +1005,11 @@ select {
     display: flex;
     flex-direction: column;
     max-width: 390px;
+    margin-bottom: 0;
   }
 
   .post-picture {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin-bottom: 15px;
   }
@@ -1065,23 +1072,60 @@ select {
   }
 
   .box-popup {
-    width: 50%;
-    height: 50vh;
+    position: absolute;
+    max-width: 390px;
+    padding: 54px 30px;
+    background-color: var(--color-white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .popup-block-title {
+    margin: 0 0 43px 0;
+    text-align: center;
+    font-family: "OpenSans-Bold", sans-serif;
+    font-size: 18px;
+    color: var(--color-medium-black);
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .popup-block-title:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 66px;
+    height: 3px;
+    background-color: #e1d9bd;
+    top: 140%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .close-svg {
+    width: 27px;
+    height: 27px;
   }
 
 }
-
 
 @media (max-width: 640px), (orientation: portrait) {
 
   .header {
     max-width: 100vw;
+    padding-bottom: 220px;
     margin: 0;
     position: relative;
     background-image: url("../images/banner-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;  
+   }
+   .wrp {
+    padding-left: 45px;
+    padding-right: 45px;
    }
 
   .header-menu {
@@ -1091,13 +1135,15 @@ select {
   .header-line {
     display: flex;
     flex-direction: column;
+    padding: 0;
+    width: 100%;
   }
 
   .header-logo {
-    margin-top: 174px;
+    margin-top: 190px;
     margin-bottom: 45px;
-    max-width: 270px;
-  }
+    width: 100%;
+   }
 
   .burger-menu {
     order: -1;
@@ -1112,19 +1158,23 @@ select {
   }
 
   .title-text {
-    margin-top: 0;
-    max-width: 275px;
+    margin: 0;
+    width: 100%;
     font-size: 26px;
     line-height: 36px;
+    text-align: center;
   }
+
   .trends {
     max-width: 100vw;
+    padding-top: 40px;
   }
 
 
   .block-title {
     font-size: 16px;
     max-width: 100vw;
+    margin-bottom: 36px;
   }
 
   .post-trends {
@@ -1137,10 +1187,21 @@ select {
     max-width: 100vw;
   }
 
+  .trend-content {
+    padding: 30px 20px 30px 20px;
+    text-align: left;
+  }
+
+  .trend-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   .conteiner {
     flex-direction: column;
     max-width: 100vw;
     margin: 0;
+    padding-top: 44px;
   }
 
   .posts {
@@ -1183,6 +1244,7 @@ select {
 
   .post-title {
     font-size: 16px;
+    line-height: 20px;
     margin-top: 15px;
     margin-bottom: 25px;
   }
@@ -1194,7 +1256,11 @@ select {
 
   .post-text {
     hyphens: auto;
-  }
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    }
 
   .adds {
     width: 100%;
@@ -1207,7 +1273,7 @@ select {
   }
 
   .new-posts {
-    margin-bottom: 44px;
+    margin-bottom: 60px;
   }
 
   .search {
@@ -1268,7 +1334,7 @@ select {
   }
 
   .item-third {
-    width: 100%;       
+    width: 100%;
     background-image: url("../images/shop-item-mobile3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1279,6 +1345,7 @@ select {
     font-size: 20px;
     color: var(--color-medium-black);
     text-transform: uppercase;
+    margin-bottom: 42px;
   }
 
   .post-link {
@@ -1316,4 +1383,79 @@ select {
     margin-bottom: 50px;
   }
 
+  .box-popup {
+    position: absolute;
+    max-width: 280px;
+    width: 85%;
+    min-height: 545px;
+    padding: 30px 25px;
+    background-color: var(--color-white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .popup-block-title {
+    margin: 0 0 43px 0;
+    text-align: center;
+    font-family: "OpenSans-Bold", sans-serif;
+    font-size: 16px;
+    color: var(--color-medium-black);
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .popup-block-title:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 66px;
+    height: 3px;
+    background-color: #e1d9bd;
+    top: 140%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .popup-content {
+    justify-content: space-between;
+  }
+
+  .textarea-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  .textarea-field-content {
+    resize: none;
+    height: 130px;
+  }
+
+  .close-svg {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    right: 0px;
+    top: -30px;
+  }
 }
+
+/*@media (min-width: 641px) and (max-width: 1199px), (orientation: landscape) {
+  .post-trends {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+  }
+}*/
+
+
+/*@media (max-width: 640px), (orientation: landscape) {
+  .post-trends {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+}*/
+
