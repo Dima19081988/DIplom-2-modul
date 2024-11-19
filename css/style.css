@@ -926,7 +926,7 @@ select {
 }
 
 
-@media (min-width: 641px) and (max-width: 1199px), (orientation: portrait) {
+@media (min-width: 641px) and (max-width: 1199px) {
   
   .header {
     padding-bottom: 125px;
@@ -989,7 +989,6 @@ select {
   }
 
   .conteiner {
-    /*width: 770px;*/
     width: 100%;
     margin: 0;
     padding: 50px 35px;
@@ -1111,7 +1110,16 @@ select {
 
 }
 
-@media (max-width: 640px), (orientation: portrait) {
+/*@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+  .post-trends {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+  }
+}
+*/
+
+@media (max-width: 640px) and (orientation: portrait) {
 
   .header {
     max-width: 100vw;
@@ -1166,25 +1174,25 @@ select {
   }
 
   .trends {
-    max-width: 100vw;
+    width: 100%;
     padding-top: 40px;
   }
 
 
   .block-title {
     font-size: 16px;
-    max-width: 100vw;
+    width: 100%;
     margin-bottom: 36px;
   }
 
   .post-trends {
     display: flex;
     flex-direction: column;
-    max-width: 100vw;
+    width: 100%;
   }
 
   .trend-box {
-    max-width: 100vw;
+    width: 100%;
   }
 
   .trend-content {
@@ -1199,7 +1207,7 @@ select {
 
   .conteiner {
     flex-direction: column;
-    max-width: 100vw;
+    width: 100%;
     margin: 0;
     padding-top: 44px;
   }
@@ -1233,7 +1241,7 @@ select {
   }
 
   .post-picture {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin-bottom: 15px;
   }
@@ -1440,22 +1448,14 @@ select {
     top: -30px;
   }
 }
-
-/*@media (min-width: 641px) and (max-width: 1199px), (orientation: landscape) {
-  .post-trends {
-    display: flex;
-    gap: 5px;
-    justify-content: space-between;
-  }
-}*/
-
-
-/*@media (max-width: 640px), (orientation: landscape) {
+/*
+@media (max-width: 640px) and (orientation: landscape) {
   .post-trends {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
   }
-}*/
+}
 
+*/
